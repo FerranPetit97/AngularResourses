@@ -18,6 +18,6 @@ import { CommonModule } from '@angular/common';
     CommonModule,
   ],
   declarations: [WelcomeComponent, DinamicButtonComponent],
-  exports: [WelcomeComponent, DinamicButtonComponent],
+  exports: [WelcomeComponent],
 })
 export class WelcomeModule {}
