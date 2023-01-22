@@ -30,14 +30,7 @@
       </li>
     </ul>
   </nz-sider>
-  <nz-layout>
-    <nz-header>
-      <div class="app-header">
-        <span class="header-trigger" (click)="isCollapsed = !isCollapsed">
-          <span class="trigger" nz-icon [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"></span>
-        </span>
-      </div>
-    </nz-header>
+  <nz-layout class="right-layout">
     <nz-content>
       <div class="inner-content">
         <router-outlet></router-outlet>

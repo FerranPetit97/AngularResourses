@@ -5,4 +5,6 @@ import { Component } from '@angular/core';
   templateUrl: './proyectos.component.html',
   styleUrls: ['./proyectos.component.scss'],
 })
-export class ProyectosComponent {}
+export class ProyectosComponent {
+  tabs = ['CALCULATOR'];
+}

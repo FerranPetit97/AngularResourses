@@ -1,32 +1,32 @@
 <div class="calculator">
   <div class="wrapper">
     <div class="screen">
-      {{ this.number }}
+      <ng-container *ngIf="this.stringNumber">{{ this.stringNumber }}</ng-container>
     </div>
-    <button class="button">{{ buttons[0] }}</button>
-    <button class="button">{{ buttons[1] }}</button>
-    <button class="button">{{ buttons[2] }}</button>
-    <button class="button">{{ buttons[3] }}</button>
+    <button class="button" (click)="clear()">{{ buttons[0] }}</button>
+    <button class="button" (click)="clearScreen()">{{ buttons[1] }}</button>
+    <button class="button" (click)="remove()">{{ buttons[2] }}</button>
+    <button class="button" (click)="divide(buttons[3])">{{ buttons[3] }}</button>
     <button class="button" (click)="addNumber(buttons[4])">{{ buttons[4] }}</button>
     <button class="button" (click)="addNumber(buttons[5])">{{ buttons[5] }}</button>
     <button class="button" (click)="addNumber(buttons[6])">{{ buttons[6] }}</button>
-    <button class="button">{{ buttons[7] }}</button>
+    <button class="button" (click)="multiply(buttons[7])">{{ buttons[7] }}</button>
     <button class="button" (click)="addNumber(buttons[8])">{{ buttons[8] }}</button>
     <button class="button" (click)="addNumber(buttons[9])">{{ buttons[9] }}</button>
     <button class="button" (click)="addNumber(buttons[10])">{{ buttons[10] }}</button>
-    <button class="button">{{ buttons[11] }}</button>
+    <button class="button" (click)="subtract(buttons[11])">{{ buttons[11] }}</button>
     <button class="button" (click)="addNumber(buttons[12])">{{ buttons[12] }}</button>
     <button class="button" (click)="addNumber(buttons[13])">{{ buttons[13] }}</button>
     <button class="button" (click)="addNumber(buttons[14])">{{ buttons[14] }}</button>
-    <button class="button">{{ buttons[15] }}</button>
+    <button class="button" (click)="raised(buttons[15])">{{ buttons[15] }}</button>
     <button class="button" (click)="addNumber(buttons[16])">{{ buttons[16] }}</button>
     <button class="button" (click)="addNumber(buttons[17])">{{ buttons[17] }}</button>
-    <button class="button equal">{{ buttons[18] }}</button>
+    <button class="button equal" (click)="equal(buttons[18])">{{ buttons[18] }}</button>
     <button class="button" (click)="sum(buttons[19])">{{ buttons[19] }}</button>
   </div>
   <div class="historical" *ngIf="historical">
     <ng-container *ngFor="let number of historical">
-      {{ number }}
+      <p>{{ number }}</p>
     </ng-container>
   </div>
 </div>

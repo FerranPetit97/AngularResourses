@@ -1,5 +1,7 @@
-<nz-tabset nzSize="large">
-  <nz-tab nzTitle="Calculator">
-    <app-calculator></app-calculator>
-  </nz-tab>
-</nz-tabset>
+<div class="card-container">
+  <nz-tabset nzType="card" nzSize="large">
+    <nz-tab *ngFor="let tab of tabs" [nzTitle]="tab">
+      <app-calculator></app-calculator>
+    </nz-tab>
+  </nz-tabset>
+</div>

@@ -6,9 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./calculator.component.scss'],
 })
 export class CalculatorComponent {
-  number: string = '';
+  stringNumber: string = '';
 
-  historical: string[];
+  historical: string[] = [];
+
+  historicalNumber: number[] = [];
+
+  result: number;
 
   buttons: string[] = [
     'CE',
@@ -33,18 +37,121 @@ export class CalculatorComponent {
     '+',
   ];
 
-  addNumber(number: string): void {
-    this.number = this.number + number;
-
-    console.log(this.number);
+  addNumber(stringNumber: string): void {
+    this.stringNumber = this.stringNumber + stringNumber;
   }
 
   sum(operational: string): void {
-    this.setHistorical(this.number);
+    this.getResult(operational);
+
+    this.setHistorical(`${this.result} +`);
+
+    this.stringNumber = `${this.result}`;
   }
 
-  setHistorical(number: string) {
+  subtract(operational: string): void {
+    this.getResult(operational);
+
+    this.setHistorical(`${this.result} -`);
+
+    this.stringNumber = `${this.result}`;
+  }
+
+  multiply(operational: string): void {
+    this.getResult(operational);
+
+    this.setHistorical(`${this.result} x`);
+
+    this.stringNumber = `${this.result}`;
+  }
+
+  raised(operational: string): void {
+    this.getResult(operational);
+
+    this.setHistorical(`${this.result} ^`);
+
+    this.stringNumber = `${this.result}`;
+  }
+
+  divide(operational: string): void {
+    this.getResult(operational);
+
+    this.setHistorical(`${this.result} /`);
+
+    this.stringNumber = `${this.result}`;
+  }
+
+  getResult(operational: string): void {
+    if (this.result) {
+      switch (operational) {
+        case '+':
+          this.result = this.result + this.getNumber(this.stringNumber);
+          break;
+        case '-':
+          this.result = this.result - this.getNumber(this.stringNumber);
+          break;
+        case '^':
+          this.result = Math.pow(
+            this.result,
+            this.getNumber(this.stringNumber)
+          );
+          break;
+        case 'x':
+          this.result = this.result * this.getNumber(this.stringNumber);
+          break;
+        case '/':
+          this.result = this.result / this.getNumber(this.stringNumber);
+          break;
+        case '=':
+          if (this.historical.length != 0) {
+            const lastHistorical = this.historical[this.historical.length - 1];
+            const equalOperational = lastHistorical[lastHistorical.length - 1];
+
+            this.getResult(equalOperational);
+          }
+          break;
+      }
+    } else {
+      this.result = this.getNumber(this.stringNumber);
+    }
+  }
+
+  setHistorical(stringNumber: string): void {
+    if (this.result || this.result === 0) {
+      this.historicalNumber.push(this.result);
+    }
+    this.historical.push(stringNumber);
+  }
+
+  getNumber(stringNumber: string): number {
+    let number: number;
+
+    number = +stringNumber;
+
+    return number;
+  }
+
+  equal(operational: string): void {
+    this.getResult(operational);
+
+    this.setHistorical(`${this.result}`);
+
+    this.stringNumber = `${this.result}`;
+  }
+
+  clearScreen() {
+    this.stringNumber = '';
+  }
+
+  remove() {
+    if (this.stringNumber) {
+      this.stringNumber = this.stringNumber.slice(0, -1);
+    }
+  }
+
+  clear(): void {
     this.historical = [];
-    this.historical.push(number);
+    this.result = 0;
+    this.stringNumber = '';
   }
 }
