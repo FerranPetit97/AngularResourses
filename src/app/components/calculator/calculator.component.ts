@@ -46,7 +46,7 @@ export class CalculatorComponent {
 
     this.setHistorical(`${this.result} +`);
 
-    this.stringNumber = `${this.result}`;
+    this.stringNumber = '';
   }
 
   subtract(operational: string): void {
@@ -54,7 +54,7 @@ export class CalculatorComponent {
 
     this.setHistorical(`${this.result} -`);
 
-    this.stringNumber = `${this.result}`;
+    this.stringNumber = '';
   }
 
   multiply(operational: string): void {
@@ -62,7 +62,7 @@ export class CalculatorComponent {
 
     this.setHistorical(`${this.result} x`);
 
-    this.stringNumber = `${this.result}`;
+    this.stringNumber = '';
   }
 
   raised(operational: string): void {
@@ -70,7 +70,7 @@ export class CalculatorComponent {
 
     this.setHistorical(`${this.result} ^`);
 
-    this.stringNumber = `${this.result}`;
+    this.stringNumber = '';
   }
 
   divide(operational: string): void {
@@ -78,7 +78,7 @@ export class CalculatorComponent {
 
     this.setHistorical(`${this.result} /`);
 
-    this.stringNumber = `${this.result}`;
+    this.stringNumber = '';
   }
 
   getResult(operational: string): void {
@@ -136,7 +136,7 @@ export class CalculatorComponent {
 
     this.setHistorical(`${this.result}`);
 
-    this.stringNumber = `${this.result}`;
+    this.stringNumber = '';
   }
 
   clearScreen() {
