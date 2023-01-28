@@ -28,5 +28,6 @@ export class TicTacToeComponent implements OnInit {
 
   private flipTurn(): ETurn {
     return Math.random() < 0.5 ? ETurn.blue : ETurn.red;
+    console.log('Hola');
   }
 }
