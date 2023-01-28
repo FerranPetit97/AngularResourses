@@ -10,8 +10,8 @@ import { ProyectosComponent } from './proyectos.component';
 import { CommonModule } from '@angular/common';
 
 import { CalculatorComponent } from '../../components/calculator/calculator.component';
-
 import { TicTacToeComponent } from '../../components/tic-tac-toe/tic-tac-toe.component';
+import { LoadersComponent } from '../../components/loaders/loaders.component';
 
 @NgModule({
   imports: [
@@ -21,7 +21,12 @@ import { TicTacToeComponent } from '../../components/tic-tac-toe/tic-tac-toe.com
     CommonModule,
     NzTabsModule,
   ],
-  declarations: [ProyectosComponent, CalculatorComponent, TicTacToeComponent],
+  declarations: [
+    ProyectosComponent,
+    CalculatorComponent,
+    TicTacToeComponent,
+    LoadersComponent,
+  ],
   exports: [ProyectosComponent],
 })
 export class ProyectosModule {}
