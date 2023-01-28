@@ -1,7 +1,10 @@
 <div class="card-container">
-  <nz-tabset nzType="card" nzSize="large">
-    <nz-tab *ngFor="let tab of tabs" [nzTitle]="tab">
+  <nz-tabset nzSize="large">
+    <nz-tab nzTitle="CALCULATOR">
       <app-calculator></app-calculator>
+    </nz-tab>
+    <nz-tab nzTitle="TIC TAC TOE">
+      <app-tic-tac-toe></app-tic-tac-toe>
     </nz-tab>
   </nz-tabset>
 </div>

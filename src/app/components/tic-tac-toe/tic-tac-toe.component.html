@@ -1,0 +1,106 @@
+<div class="wrapper">
+  <div class="game">
+    <div class="square" (click)="changeTurn($event)">
+      <ng-container *ngIf="firstTimeClicked">
+        <ng-container *ngIf="turn === 'blue'; then redToken else blueToken"></ng-container>
+        <ng-template #blueToken>
+          <div class="blue-token">blue</div>
+        </ng-template>
+        <ng-template #redToken>
+          <div class="red-token">red</div>
+        </ng-template>
+      </ng-container>
+    </div>
+    <div class="square" (click)="changeTurn($event)">
+      <ng-container *ngIf="firstTimeClicked">
+        <ng-container *ngIf="turn === 'blue'; then redToken else blueToken"></ng-container>
+        <ng-template #blueToken>
+          <div class="blue-token">blue</div>
+        </ng-template>
+        <ng-template #redToken>
+          <div class="red-token">red</div>
+        </ng-template>
+      </ng-container>
+    </div>
+    <div class="square" (click)="changeTurn($event)">
+      <ng-container *ngIf="firstTimeClicked">
+        <ng-container *ngIf="turn === 'blue'; then redToken else blueToken"></ng-container>
+        <ng-template #blueToken>
+          <div class="blue-token">blue</div>
+        </ng-template>
+        <ng-template #redToken>
+          <div class="red-token">red</div>
+        </ng-template>
+      </ng-container>
+    </div>
+    <div class="square" (click)="changeTurn($event)">
+      <ng-container *ngIf="firstTimeClicked">
+        <ng-container *ngIf="turn === 'blue'; then redToken else blueToken"></ng-container>
+        <ng-template #blueToken>
+          <div class="blue-token">blue</div>
+        </ng-template>
+        <ng-template #redToken>
+          <div class="red-token">red</div>
+        </ng-template>
+      </ng-container>
+    </div>
+    <div class="square" (click)="changeTurn($event)">
+      <ng-container *ngIf="firstTimeClicked">
+        <ng-container *ngIf="turn === 'blue'; then redToken else blueToken"></ng-container>
+        <ng-template #blueToken>
+          <div class="blue-token">blue</div>
+        </ng-template>
+        <ng-template #redToken>
+          <div class="red-token">red</div>
+        </ng-template>
+      </ng-container>
+    </div>
+    <div class="square" (click)="changeTurn($event)">
+      <ng-container *ngIf="firstTimeClicked">
+        <ng-container *ngIf="turn === 'blue'; then redToken else blueToken"></ng-container>
+        <ng-template #blueToken>
+          <div class="blue-token">blue</div>
+        </ng-template>
+        <ng-template #redToken>
+          <div class="red-token">red</div>
+        </ng-template>
+      </ng-container>
+    </div>
+    <div class="square" (click)="changeTurn($event)">
+      <ng-container *ngIf="firstTimeClicked">
+        <ng-container *ngIf="turn === 'blue'; then redToken else blueToken"></ng-container>
+        <ng-template #blueToken>
+          <div class="blue-token">blue</div>
+        </ng-template>
+        <ng-template #redToken>
+          <div class="red-token">red</div>
+        </ng-template>
+      </ng-container>
+    </div>
+    <div class="square" (click)="changeTurn($event)">
+      <ng-container *ngIf="firstTimeClicked">
+        <ng-container *ngIf="turn === 'blue'; then redToken else blueToken"></ng-container>
+        <ng-template #blueToken>
+          <div class="blue-token">blue</div>
+        </ng-template>
+        <ng-template #redToken>
+          <div class="red-token">red</div>
+        </ng-template>
+      </ng-container>
+    </div>
+    <div class="square" (click)="changeTurn($event)">
+      <ng-container *ngIf="firstTimeClicked">
+        <ng-container *ngIf="turn === 'blue'; then redToken else blueToken"></ng-container>
+        <ng-template #blueToken>
+          <div class="blue-token">blue</div>
+        </ng-template>
+        <ng-template #redToken>
+          <div class="red-token">red</div>
+        </ng-template>
+      </ng-container>
+    </div>
+  </div>
+  <div class="turn">
+    <span>The turn it's turn for {{ turn }}</span>
+  </div>
+</div>

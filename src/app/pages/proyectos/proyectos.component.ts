@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./proyectos.component.scss'],
 })
 export class ProyectosComponent {
-  tabs = ['CALCULATOR'];
+  tabs = ['CALCULATOR', 'TIC TAC TOE'];
 }

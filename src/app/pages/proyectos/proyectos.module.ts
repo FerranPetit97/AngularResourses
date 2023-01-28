@@ -11,6 +11,8 @@ import { CommonModule } from '@angular/common';
 
 import { CalculatorComponent } from '../../components/calculator/calculator.component';
 
+import { TicTacToeComponent } from '../../components/tic-tac-toe/tic-tac-toe.component';
+
 @NgModule({
   imports: [
     NzButtonModule,
@@ -19,7 +21,7 @@ import { CalculatorComponent } from '../../components/calculator/calculator.comp
     CommonModule,
     NzTabsModule,
   ],
-  declarations: [ProyectosComponent, CalculatorComponent],
+  declarations: [ProyectosComponent, CalculatorComponent, TicTacToeComponent],
   exports: [ProyectosComponent],
 })
 export class ProyectosModule {}

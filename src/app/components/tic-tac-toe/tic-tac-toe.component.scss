@@ -1,0 +1,23 @@
+::ng-deep .card-container {
+  height: 100%;
+  width: 100%;
+}
+
+.wrapper {
+  height: 100%;
+  width: 100%;
+  
+  .game {
+    height: 500px;
+    width: 500px;
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr 1fr; 
+    gap: 25px 25px; 
+    
+    .square {
+      background: var(--primary-color);
+      cursor: pointer;
+    }
+  }
+}

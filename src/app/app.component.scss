@@ -13,9 +13,6 @@
   z-index: 10;
   min-height: 100vh;
   box-shadow: 2px 0 6px rgba(0, 21, 41, 0.35);
-  overflow: auto;
-  position: fixed;
-  left: 0;
 }
 
 .header-trigger {
@@ -30,17 +27,12 @@
   color: #1890ff;
 }
 
-.right-layout {
-  margin-left: 250px;
-}
-
 .sidebar-logo {
   position: relative;
   height: 64px;
   padding-left: 24px;
   overflow: hidden;
   line-height: 64px;
-  background: #001529;
   transition: all 0.3s;
 }
 
@@ -54,19 +46,8 @@
 .sidebar-logo h1 {
   display: inline-block;
   margin: 0 0 0 20px;
-  color: #fff;
   font-weight: 600;
   font-size: 14px;
   font-family: Avenir, Helvetica Neue, Arial, Helvetica, sans-serif;
   vertical-align: middle;
-}
-
-nz-content {
-  overflow: initial;
-  height: 100vh;
-}
-
-.inner-content {
-  background: #fff;
-  background: #f5f5f5;
 }
